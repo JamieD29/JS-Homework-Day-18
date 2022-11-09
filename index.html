@@ -39,7 +39,7 @@
       <div class="card py-2 px-5">
         <!-- Nhập chuỗi -->
         <div class="container"   id="inputArray">
-            <h4>Nhập từng số vào chuỗi </h4>
+            <h4>Nhập từng số nguyên vào chuỗi </h4>
             <div class="row">
                 <div class="col-6">
                     <div class="input-group mb-3">
@@ -211,7 +211,8 @@
               </button>
             </h2>
             <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body"><div class="button container">
+              <div class="accordion-body">
+                <div class="button container">
                 <button id="findingFirstPrime" class="btn btn-success" > Tìm số nguyên tố </button>
               </div>
               <div class="result container mt-2">
@@ -229,7 +230,37 @@
               </button>
             </h2>
             <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              <div class="accordion-body">
+                <!-- Nhập Arry mới -->
+                <div class="container"   id="inputArray">
+                  <h4>Nhập từng số thực vào chuỗi mới </h4>
+                  <div class="row">
+                      <div class="col-6">
+                          <div class="input-group mb-3">
+                              <input id="inputNewNumber" type="number" class="form-control" placeholder="Nhập số n"  >
+                            </div>
+                      </div>
+                      <div class="col-6">
+                          <div class="output_button">
+                              <button onclick="addRealNumberIntoNewArray()" class="btn btn-outline-success">Thêm số</button>
+                              <button id="deleteNewArray" class="btn btn-outline-danger">Reset</button>
+                          </div>
+                      </div>
+                  </div>
+      
+                  <div class="container">
+                      <p class="bg-success p-2 bg-opacity-25 rounded text-success fs-5" > <span class="fa-solid fa-angle-right"></span> <span id="outputNewArry"></span>  </p>
+                  </div>
+      
+              </div>
+              <!-- Thực hiện -->
+              <div class="button container">
+                <button id="countingIntergerNumber" class="btn btn-success" > Đếm số nguyên </button>
+              </div>
+              <div class="result container mt-2">
+                <p class="bg-success p-2 bg-opacity-25 rounded text-success fs-5" > <span class="fa-solid fa-angle-right"></span> <span id="intergerResult"></span>  </p>
+              </div>  
+            </div>
             </div>
           </div>
            <!-- Bài 10 -->

@@ -1,13 +1,15 @@
 
 var arr = new Array();
-
-
 function addNumberIntoArray() {
 
     if (arr[0] === "") {
         arr.shift();
     }
-    arr.push(+document.getElementById('inputNumber').value);
+    var interger= +document.getElementById('inputNumber').value;
+    if(Number.isInteger(interger)){
+      arr.push(+document.getElementById('inputNumber').value);  
+    }
+    
     document.getElementById('outputArry').innerHTML = arr;
 
 }
@@ -17,6 +19,35 @@ document.getElementById('deleteArray').onclick= function(){
     document.getElementById('outputArry').innerHTML = arr;
     
 }
+
+var newArr = new Array();
+function addRealNumberIntoNewArray() {
+
+    if (newArr[0] === "") {
+        newArr.shift();
+    }
+    newArr.push(+document.getElementById('inputNewNumber').value);
+    document.getElementById('outputNewArry').innerHTML = newArr;
+   // console.log(newArr); 
+}
+
+document.getElementById('deleteNewArray').onclick= function(){
+    newArr = [];
+    document.getElementById('outputNewArry').innerHTML = newArr;
+  // console.log(newArr); 
+}
+
+document.getElementById('countingIntergerNumber').onclick= function(){
+    var countInt= 0;
+    for(var i= 0 ; i < newArr.length; i++){
+        if(Number.isInteger(newArr[i])){
+            countInt++;
+        }
+    }
+
+    document.getElementById('intergerResult').innerHTML = "Mảng số thực có " + countInt + " số nguyên.";
+}
+
 
 function sumArray() {
     var sum = 0;
